@@ -1,0 +1,3 @@
+<table style="background-color:RGB(89,146,215);text-align:left;">
+	<tr><td>
+	<a href="post_add.php"><img src="Images/postcreate.jpg" border="0"></a><a href="post_modify.php"><img src="Images/postmodify.jpg" border="0"></a><a href="post_remove.php"><img src="Images/postremove.jpg" border="0"></a><a href="com_ban.php"><img src="Images/bancom.jpg" border="0"></a><a href="com_remove.php"><img src="Images/delcom.jpg" border="0"></a><img src="Images/button.jpg" border="0"><a href="logout.php"><img src="Images/logout.jpg" border="0"></a></td></tr></table>
