@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional// EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml11-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang = "en"
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Dive Event Registration</title>
+<body background="abstract_color_background_picture_8016.jpg">
+<font face="Arial" size="2" color="white">
+<form action="registration_done.php" method="post">
+<fieldset><legend>Enter Dive Event Information in the form below:</legend>
+<?php
+
+// This script make three pull-down menus
+// for an html form: months, days, years.
+
+//Make the months array:
+$months = array(1 => 'January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+
+//Make the days and years arrays:
+$days = range(1,31);
+$years = range(2008, 2018);
+
+//Make the months pull-down menu:
+echo '<select name="month">';
+foreach ($months as $months => $value){
+	echo "<option value=\"$months\">$value</option>\n";
+}
+echo '</select>';
+
+//Make the days pull-down menu:
+echo '<select name="day">';
+foreach ($days as $days => $value){
+	echo "<option value=\"$value\">$value</option>\n";
+}
+echo '</select>';
+
+//Make the years pull-down menu:
+echo '<select name="year">';
+foreach ($years as $years => $value){
+	echo "<option value=\"$value\">$value</option>\n";
+}
+echo '</select>';
+?>
+<p><b>&nbsp&nbsp&nbsp&nbsp Dive Name:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="dive_name" size="20" maxlength="40"
+/></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Boat Name:</b> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="boat_name" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Limit:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="limit" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Price:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="price" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Marina:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="marina" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Marina Address:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="marina_add" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Alternate Marina:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="alt_marina" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Alternate Marina Address:</b>
+&nbsp&nbsp
+<input type="text" name="alt_marina_add" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Departure Time:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<select name="showtime">
+<option value="00:00:00">12:00 AM</option>
+<option value="00:30:00">12:30 AM</option>
+<option value="01:00:00">01:00 AM</option>
+<option value="01:30:00">01:30 AM</option>
+<option value="02:00:00">02:00 AM</option>
+<option value="02:30:00">02:30 AM</option>
+<option value="03:00:00">03:00 AM</option>
+<option value="03:30:00">03:30 AM</option>
+<option value="04:00:00">04:00 AM</option>
+<option value="04:30:00">04:30 AM</option>
+<option value="05:00:00">05:00 AM</option>
+<option value="05:30:00">05:30 AM</option>
+<option value="06:00:00">06:00 AM</option>
+<option value="06:30:00">06:30 AM</option>
+<option value="07:00:00">07:00 AM</option>
+<option value="07:30:00">07:30 AM</option>
+<option value="08:00:00">08:00 AM</option>
+<option value="08:30:00">08:30 AM</option>
+<option value="09:00:00">09:00 AM</option>
+<option value="09:30:00">09:30 AM</option>
+<option value="10:00:00">10:00 AM</option>
+<option value="10:30:00">10:30 AM</option>
+<option value="11:00:00">11:00 AM</option>
+<option value="11:30:00">11:30 AM</option>
+<option value="12:00:00">12:00 PM</option>
+<option value="12:30:00">12:30 PM</option>
+<option value="13:00:00">01:00 PM</option>
+<option value="13:30:00">01:30 PM</option>
+<option value="14:00:00">02:00 PM</option>
+<option value="14:30:00">02:30 PM</option>
+<option value="15:00:00">03:00 PM</option>
+<option value="15:30:00">03:30 PM</option>
+<option value="16:00:00">04:00 PM</option>
+<option value="16:30:00">04:30 PM</option>
+<option value="17:00:00">05:00 PM</option>
+<option value="17:30:00">05:30 PM</option>
+<option value="18:00:00">06:00 PM</option>
+<option value="18:30:00">06:30 PM</option>
+<option value="19:00:00">07:00 PM</option>
+<option value="19:30:00">07:30 PM</option>
+<option value="20:00:00">08:00 PM</option>
+<option value="20:30:00">08:30 PM</option>
+<option value="21:00:00">09:00 PM</option>
+<option value="21:30:00">09:30 PM</option>
+<option value="22:00:00">10:00 PM</option>
+<option value="22:30:00">10:30 PM</option>
+<option value="23:00:00">11:00 PM</option>
+<option value="23:30:00">11:30 PM</option>
+</select></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp BBQ:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" name="bbq" size="40"
+maxlength="60" /></p>
+<p><b>&nbsp&nbsp&nbsp&nbsp Remarks:</b>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<textarea name="remarks" rows="3"
+cols="40" maxlength="255"></textarea></p><br>
+
+</fieldset>
+<p>
+<div align="center"><input type="submit" name="submit" value="Submit Dive Event Information" /></div>
+</font>
+</form>
+</body>
+</html>
